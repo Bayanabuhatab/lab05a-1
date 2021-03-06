@@ -98,28 +98,28 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+//function sumArray(sumArr) { //eslint-disable-line
 
-    let sumNumber = 0;
-    let sumString = ``;
+//let sumNumber = 0;
+   // let sumString = ``;
   
-    for (let i = 0; i < sumArr.length; i++) {
-      sumNumber += sumArr[i];
-      if (i === sumArr.length - 1) {
-        sumString += `${sumArr[i]}`;
-      } else {
-        sumString += `${sumArr[i]},`;
-      }
-    }
+   // for (let i = 0; i < sumArr.length; i++) {
+    //  sumNumber += sumArr[i];
+    //  if (i === sumArr.length - 1) {
+     //   sumString += `${sumArr[i]}`;
+     // } else {
+     //   sumString += `${sumArr[i]},`;
+    //  }
+   // }
   
-    return [sumNumber, `${sumString} was passed in as an array of numbers, and ${sumNumber} is their sum.`];
-}
+  //  return [sumNumber, `${sumString} was passed in as an array of numbers, and ${sumNumber} is their sum.`];
+//}
 
 // Here is the test for sumArray(); uncomment it to run it
 
- testSumArray(testArray);
+ //testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -135,11 +135,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    let multiNumber = 1;
+    let multiString = ``;
+  
+    for (let i = 0; i < multArr.length; i++) {
+      multiNumber *= multArr[i];
+      if (i === multArr.length - 1) {
+        multiString += `${multArr[i]}`;
+      } else {
+        multiString += `${multArr[i]},`;
+      }
+    }
+  
+    return [multiNumber, `The numbers ${multiString} have a product of ${multiNumber}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
