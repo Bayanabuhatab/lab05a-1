@@ -135,23 +135,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    let multiNumber = 1;
-    let multiString = ``;
+    //let multiNumber = 1;
+   // let multiString = ``;
   
-    for (let i = 0; i < multArr.length; i++) {
-      multiNumber *= multArr[i];
-      if (i === multArr.length - 1) {
-        multiString += `${multArr[i]}`;
-      } else {
-        multiString += `${multArr[i]},`;
-      }
-    }
+    //for (let i = 0; i < multArr.length; i++) {
+     // multiNumber *= multArr[i];
+     // if (i === multArr.length - 1) {
+      //  multiString += `${multArr[i]}`;
+     // } else {
+     //   multiString += `${multArr[i]},`;
+     // }
+  //  }
   
-    return [multiNumber, `The numbers ${multiString} have a product of ${multiNumber}.`];
-}
+  //  return [multiNumber, `The numbers ${multiString} have a product of ${multiNumber}.`];
+//}
 
 // Here is the test for multiplyArray(); uncomment it to run it
- testMultiplyArray(testArray);
+// testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -175,10 +175,20 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    var strArray = dynamicArray.join();
+    var sent = '';
+    var total=1;
+    for (var i=0; i<dynamicArray.length; i++){
+      var arrTotal = multiply(dynamicArray[i], total);
+      total = arrTotal[0];
+    }
+    
+    sent = `The numbers ${strArray } have a product of ${total}.`;
+    return [total, sent];
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
