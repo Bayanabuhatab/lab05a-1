@@ -135,19 +135,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    let multiNumber = 1;
-   let multiString = ``;
-  
-    for (let i = 0; i < multArr.length; i++) {
-     multiNumber *= multArr[i];
-     if (i === multArr.length - 1) {
-       multiString += `${multArr[i]}`;
-     } else {
-       multiString += `${multArr[i]},`;
-     }
-   }
-  
-   return [multiNumber, `The numbers ${multiString} have a product of ${multiNumber}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -173,6 +160,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
