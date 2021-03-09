@@ -102,19 +102,6 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
-let sumNumber = 0;
-   let sumString = ``;
-  
-   for (let i = 0; i < sumArr.length; i++) {
-     sumNumber += sumArr[i];
-     if (i === sumArr.length - 1) {
-       sumString += `${sumArr[i]}`;
-     } else {
-       sumString += `${sumArr[i]},`;
-     }
-   }
-  
-   return [sumNumber, `${sumString} was passed in as an array of numbers, and ${sumNumber} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
