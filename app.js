@@ -10,12 +10,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
 
-   // let answer = a+b;
+   let answer = a+b;
     
-   // let newSent = `The sum of ${a} and ${b} is ${answer}.`;
+   let newSent = `The sum of ${a} and ${b} is ${answer}.`;
 
-   // let Array = [answer, newSent];
-   // return Array;
+   let Array = [answer, newSent];
+   return Array;
   }
 
 
@@ -36,12 +36,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 
-   // let product = a * b;
+   let product = a * b;
     
-   // let message = `The product of ${a} and ${b} is ${product}.`;
-  //  let result = [product, message];
+   let message = `The product of ${a} and ${b} is ${product}.`;
+   let result = [product, message];
   
-  //  return result;
+   return result;
   
 
 }
@@ -65,20 +65,20 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
-    //let solutionArr = [];
+    let solutionArr = [];
   
- // let summed1 = sum(a, b);
- // let summed2 = sum(summed1, c);
+ let summed1 = sum(a, b);
+ let summed2 = sum(summed1, c);
 
- // let mult1 = multiply(a, b);
-  //let mult2 = multiply(mult1, c);
+ let mult1 = multiply(a, b);
+  let mult2 = multiply(mult1, c);
 
-  //solutionArr[0] = summed2;
-  //solutionArr[1] = mult2;
-  //solutionArr[2] = `${a} and ${b} and ${c} sum to ${summed2}.`;
-  //solutionArr[3] = `The product of ${a} and ${b} and ${c} is ${mult2}.`;
+  solutionArr[0] = summed2;
+  solutionArr[1] = mult2;
+  solutionArr[2] = `${a} and ${b} and ${c} sum to ${summed2}.`;
+  solutionArr[3] = `The product of ${a} and ${b} and ${c} is ${mult2}.`;
 
-  //return solutionArr;
+  return solutionArr;
 }
   
 
@@ -100,22 +100,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-//function sumArray(sumArr) { //eslint-disable-line
+function sumArray(sumArr) { //eslint-disable-line
 
-//let sumNumber = 0;
-   // let sumString = ``;
+let sumNumber = 0;
+   let sumString = ``;
   
-   // for (let i = 0; i < sumArr.length; i++) {
-    //  sumNumber += sumArr[i];
-    //  if (i === sumArr.length - 1) {
-     //   sumString += `${sumArr[i]}`;
-     // } else {
-     //   sumString += `${sumArr[i]},`;
-    //  }
-   // }
+   for (let i = 0; i < sumArr.length; i++) {
+     sumNumber += sumArr[i];
+     if (i === sumArr.length - 1) {
+       sumString += `${sumArr[i]}`;
+     } else {
+       sumString += `${sumArr[i]},`;
+     }
+   }
   
-  //  return [sumNumber, `${sumString} was passed in as an array of numbers, and ${sumNumber} is their sum.`];
-//}
+   return [sumNumber, `${sumString} was passed in as an array of numbers, and ${sumNumber} is their sum.`];
+}
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -135,20 +135,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    //let multiNumber = 1;
-   // let multiString = ``;
+    let multiNumber = 1;
+   let multiString = ``;
   
-    //for (let i = 0; i < multArr.length; i++) {
-     // multiNumber *= multArr[i];
-     // if (i === multArr.length - 1) {
-      //  multiString += `${multArr[i]}`;
-     // } else {
-     //   multiString += `${multArr[i]},`;
-     // }
-  //  }
+    for (let i = 0; i < multArr.length; i++) {
+     multiNumber *= multArr[i];
+     if (i === multArr.length - 1) {
+       multiString += `${multArr[i]}`;
+     } else {
+       multiString += `${multArr[i]},`;
+     }
+   }
   
-  //  return [multiNumber, `The numbers ${multiString} have a product of ${multiNumber}.`];
-//}
+   return [multiNumber, `The numbers ${multiString} have a product of ${multiNumber}.`];
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
@@ -173,22 +173,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
-
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    var strArray = dynamicArray.join();
-    var sent = '';
-    var total=1;
-    for (var i=0; i<dynamicArray.length; i++){
-      var arrTotal = multiply(dynamicArray[i], total);
-      total = arrTotal[0];
-    }
-    
-    sent = `The numbers ${strArray } have a product of ${total}.`;
-    return [total, sent];
-  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
- testMultiplyAnyArray(testDynamicArray);
+// testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
